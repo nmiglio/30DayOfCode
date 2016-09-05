@@ -13,22 +13,24 @@ public class Solution {
     T = Integer.parseInt(scanner.nextLine());
     
     for (int i = 0; i < T; i++ ) {
-      String odd = "";
-      String even = "";    
+      StringBuilder odd = new StringBuilder();
+      StringBuilder even = new StringBuilder();    
       
       String s = scanner.nextLine();
       
       for (int j = 0; j < s.length(); j++ ) {
         if (j%2 == 0) { 
           // even
-          even = even + s.charAt(j);                    
+          even.append(s.charAt(j));
         } else {
           // odd
-          odd = odd + s.charAt(j);
+          odd.append(s.charAt(j));
         }
       }
       System.out.println(even + " " + odd);
     }
+    
+    scanner.close();
   
   }
 }
